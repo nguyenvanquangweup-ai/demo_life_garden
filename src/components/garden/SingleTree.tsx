@@ -20,13 +20,6 @@ export function SingleTree({ stage, completionPercent }: SingleTreeProps) {
 
   const treeLevel = getTreeLevel(completionPercent);
 
-  // Animated leaf particles
-  const leaves = Array.from({ length: Math.min(treeLevel * 3, 15) }).map((_, i) => ({
-    id: i,
-    delay: i * 0.1,
-    duration: 2 + Math.random(),
-  }));
-
   // Flower petals
   const flowers = Array.from({ length: Math.max(0, (treeLevel - 2) * 2) }).map((_, i) => ({
     id: i,

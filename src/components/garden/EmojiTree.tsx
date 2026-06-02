@@ -214,13 +214,12 @@ export function EmojiTree({ completionPercent }: EmojiTreeProps) {
                 : {}
             }
             transition={{
-              duration: 1.5,
+              duration: i === level ? 0.5 : 1.5,
               repeat: Infinity,
               delay: i * 0.1,
             }}
             initial={i === level ? { scale: 0 } : {}}
             whileInView={i === level ? { scale: [0, 1.3, 1] } : {}}
-            transition={i === level ? { duration: 0.5 } : {}}
           />
         ))}
       </motion.div>
